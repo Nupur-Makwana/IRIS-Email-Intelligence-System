@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Large/raw datasets
+emails.csv
+
+# Trained models
+*.pkl
+
+# IDE files
+.spyproject/
+.vscode/
+.idea/
