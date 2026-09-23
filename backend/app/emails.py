@@ -11,7 +11,7 @@ from pydantic import BaseModel
 
 from database import SessionLocal
 from models import User, Email
-from ai import predict_priority
+from ai import predict_priority , generate_summary
 from security import get_current_user
 
 
@@ -55,13 +55,19 @@ def send_email(
         email_data.subject,
         email_data.body
     )
+    
+    summary = generate_summary(
+    email_data.subject,
+    email_data.body
+)
 
     new_email = Email(
-        sender_id=current_user.id,
-        receiver_id=receiver.id,
-        subject=email_data.subject,
-        body=email_data.body,
-        priority=priority
+    sender_id=current_user.id,
+    receiver_id=receiver.id,
+    subject=email_data.subject,
+    body=email_data.body,
+    priority=priority,
+    summary=summary
     )
 
     db.add(new_email)

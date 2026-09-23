@@ -13,6 +13,9 @@ from models import User, Email
 from auth import router as auth_router
 from emails import router as email_router
 
+from pydantic import BaseModel
+from ai import generate_summary
+
 app = FastAPI(
     title="IRIS - Intelligent Email Analysis System",
     description="Backend API for the IRIS email intelligence system",
@@ -57,3 +60,19 @@ def database_test():
             "status": "error",
             "message": str(e)
         }
+class SummarizeRequest(BaseModel):
+    subject: str
+    body: str
+
+
+@app.post("/ai/summarize")
+def summarize_email_api(data: SummarizeRequest):
+    summary = generate_summary(
+        data.subject,
+        data.body
+    )
+
+    return {
+        "subject": data.subject,
+        "summary": summary
+    }
