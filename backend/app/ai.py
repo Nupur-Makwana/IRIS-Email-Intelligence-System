@@ -16,11 +16,13 @@ from summarization import summarize_email
 
 MODEL_PATH = r"E:\IRIS\models\priority_nb_model.pkl"
 VECTORIZER_PATH = r"E:\IRIS\models\priority_tfidf_vectorizer.pkl"
-
+CATEGORY_MODEL_PATH = r"E:\IRIS\models\category_lr_model.pkl"
+CATEGORY_VECTORIZER_PATH = r"E:\IRIS\models\category_tfidf_vectorizer.pkl"
 
 model = joblib.load(MODEL_PATH)
 tfidf = joblib.load(VECTORIZER_PATH)
-
+category_model = joblib.load(CATEGORY_MODEL_PATH)
+category_tfidf = joblib.load(CATEGORY_VECTORIZER_PATH)
 
 def predict_priority(subject, body):
     text = str(subject) + " " + str(body)
@@ -32,7 +34,12 @@ def predict_priority(subject, body):
     prediction = model.predict(text_tfidf)[0]
 
     return prediction
-
+def predict_category(subject, body):
+    text = str(subject) + " " + str(body)
+    clean_text = preprocess_text(text)
+    text_tfidf = category_tfidf.transform([clean_text])
+    prediction = category_model.predict(text_tfidf)[0]
+    return prediction
 
 def generate_summary(subject, body):
     return summarize_email(subject, body)

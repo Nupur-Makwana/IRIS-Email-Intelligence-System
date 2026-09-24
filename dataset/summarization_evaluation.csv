@@ -1,0 +1,105 @@
+email_id,subject,body,category,priority,reference_summary
+H001,Technical Interview Confirmation - March 18,"Hi Nupur,
+ 
+ We would like to confirm your technical interview for March 18 at 11:00 AM. Please confirm your availability by 6 PM today so that we can reserve the interview panel.
+ 
+ Regards,
+ Recruitment Team, Nexova Technologies",Job/Internship,HIGH,Technical interview is confirmed for March 18 at 11 AM; confirm availability by 6 PM today.
+H021,Group Project - Need the Code Tonight,"Hey Nupur,
+ 
+ Sir asked to see a working demo tomorrow morning before the review starts, so whatever pending modules you have please push to the repo by tonight. If the login and dashboard modules are not merged by then we will not have anything to show.
+ 
+ Ayesha",Academic,HIGH,"The working project demo is tomorrow morning, so pending login and dashboard modules must be pushed to the repository tonight."
+H041,Performance Review Moved Up to Tomorrow,"Hi Nupur,
+ 
+ HR asked us to move your performance review from next week to tomorrow at 11 AM because of a scheduling conflict with your reporting manager's travel. Please come prepared, this is the final review before the appraisal cycle closes.
+ 
+ HRBP Team, Cloudberry Systems",Work/Project,HIGH,The performance review has been moved to tomorrow at 11 AM and is the final review before the appraisal cycle closes.
+H061,Two-Factor Authentication Disabled Unexpectedly,"Dear Nupur,
+ 
+ Our system shows that two factor authentication on your account was turned off a few hours ago, which we did not initiate. If you did not make this change, please contact support immediately as your account may be compromised.
+ 
+ Security Operations, Cloudberry Systems",Security,HIGH,Two-factor authentication was disabled unexpectedly; contact support immediately if Nupur did not make the change.
+H081,Dad's Flight Got Cancelled,"Hi Nupur,
+ 
+ Dad's flight back got cancelled because of the weather and he is stuck at the airport with no clear rebooking yet. Can you check flights from your end too, in case we find something faster than what the airline is offering him?
+ 
+ Love,
+ Mom",Personal,HIGH,"Dad's flight was cancelled due to weather, and Mom asks Nupur to check for faster rebooking options."
+H101,Your Slot May Be Released,"Hi Nupur,
+ 
+ Your interview slot for Thursday is being held for you, but we have candidates on standby. If we do not hear a confirmation from you by 6 PM today, the slot will be released to the next person in line.
+ 
+ Regards,
+ Recruitment Team, Nexova Technologies",Job/Internship,HIGH,Nupur's Thursday interview slot will be released to another candidate unless she confirms by 6 PM today.
+H121,Interview Panel Waiting on Confirmation,"Dear Nupur,
+ 
+ We had shared an interview slot for you earlier today but have not received a response yet. The panel is holding the slot only until 5 PM, after which it will be offered to another candidate.
+ 
+ Careers Team, Vertex Labs",Job/Internship,HIGH,"The interview panel is holding Nupur's slot only until 5 PM, after which it will be offered to another candidate."
+H141,Sir Changed the Submission Format Tonight,"Hi Nupur,
+ 
+ Sir just messaged the class group that the report format has changed slightly and wants it resubmitted in the new template by tomorrow morning. Thought I should flag this before you finalize your file.
+ 
+ Rohan",Academic,HIGH,The report format has changed and must be resubmitted using the new template by tomorrow morning.
+H161,Need You to Handle My Call Tomorrow,"Hey Nupur,
+ 
+ Something has come up with my visa appointment and I will not be reachable during tomorrow's client call. Could you step in and handle it? I will send you my notes tonight so you are prepared.
+ 
+ Kunal",Work/Project,HIGH,Kunal needs Nupur to handle tomorrow's client call because he has a visa appointment and will send his notes tonight.
+H181,Chargeback Response Required Within 24 Hours,"Dear Nupur,
+ 
+ A chargeback has been raised on a transaction linked to your account. We need your response with supporting details within 24 hours, or the dispute will be resolved in favor of the claimant by default.
+ 
+ Support Team, Payeasy",Financial,HIGH,A chargeback dispute requires Nupur's response and supporting details within 24 hours or it may be decided for the claimant.
+H201,Test Results Ready - Doctor Wants to See You,"Hi Nupur,
+ 
+ Your recent test results have come in and Dr. Kapoor would like to discuss them with you in person rather than over the phone. Please call to book the earliest available slot today.
+ 
+ Reception, Wellness Clinic",Meeting/Appointment,HIGH,Test results are ready and the doctor wants to discuss them in person; Nupur should book the earliest available appointment.
+H221,Need to Know Your Travel Plans by Tonight,"Hi Nupur,
+ 
+ Since grandma's condition has changed, we are trying to plan who comes home this weekend. Could you let me know your travel plans tonight so I can book tickets before prices go up further?
+ 
+ Love,
+ Mom",Personal,HIGH,Mom needs Nupur's travel plans tonight so tickets can be booked after a change in grandma's condition.
+H241,Elevator Inspection Failed - Restricted Use,"Dear Residents,
+ 
+ The building elevator failed its safety inspection this morning and its use has been restricted until repairs are completed tomorrow. Please use the stairs in the meantime and avoid overloading the service lift.
+ 
+ Building Management, Green Meadows Society",Other,HIGH,The building elevator failed its safety inspection and is restricted until repairs are completed; residents should use the stairs.
+M051,Let's Plan a Catch Up Soon,"Hey Nupur,
+ 
+ It has been a while since we hung out properly. Are you free sometime next weekend? No specific plan yet, just thought we could grab coffee and catch up on everything happening lately.
+ 
+ Simran",Meeting/Appointment,MEDIUM,Simran asks Nupur if she is free next weekend to meet for coffee and catch up.
+M101,Application Received - Review in Progress,"Hi Nupur,
+ 
+ Thanks for applying to the Frontend Intern role. Our team is going through applications this month and will reach out to shortlisted candidates with next steps once the review is complete.
+ 
+ Recruitment Team, Nexova Technologies",Job/Internship,MEDIUM,Nexova Technologies received Nupur's Frontend Intern application and is currently reviewing applications.
+M151,Good Feedback From Last Week's Demo,"Hi Nupur,
+ 
+ Wanted to pass along that the client had good things to say about last week's demo. We will likely plan a follow up discussion sometime in the coming weeks to talk next steps.
+ 
+ Ramesh",Work/Project,MEDIUM,"The client gave positive feedback on last week's demo, with a follow-up discussion likely in the coming weeks."
+M201,Hackathon Dates Announced,"Dear Students,
+ 
+ The annual hackathon has been scheduled for next month. Team registrations will open soon on the club portal, keep an eye out if you are interested in participating.
+ 
+ Tech Club, Nirmaya Institute",Event/Workshop,MEDIUM,"The annual hackathon is scheduled for next month, and team registration will open soon on the club portal."
+L001,New Arrivals for the Season,"Hi Nupur,
+ 
+ Our new season collection just dropped, featuring lightweight fabrics and fresh prints. Browse the full range on our website whenever you have a moment, we think you will like a few pieces from the casual wear section.
+ 
+ Team TrendyThreads",Promotion,LOW,TrendyThreads has launched a new seasonal collection with lightweight fabrics and fresh prints.
+L101,Layering Pieces for the Season,"Hi Nupur,
+ 
+ We have added a few layering pieces to the store this week, perfect for the changing weather. Browse the collection whenever you get a chance.
+ 
+ Team TrendyThreads",Promotion,LOW,TrendyThreads added new seasonal layering pieces suitable for changing weather.
+L201,Quick Weeknight Dinner Ideas,"Hi Nupur,
+ 
+ A few quick weeknight dinner ideas featured in this week's edition for busy days. Browse whenever you are planning your meals.
+ 
+ Foodie Weekly",Food/Lifestyle,LOW,Foodie Weekly features quick weeknight dinner ideas for busy days.
