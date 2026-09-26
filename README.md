@@ -6,16 +6,16 @@ The system combines NLP techniques with a FastAPI backend and MySQL database to 
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 Managing a large number of emails can make it difficult to identify important messages, understand lengthy content, and organize emails efficiently.
 
 IRIS aims to reduce this effort by automatically analyzing emails and providing useful information such as:
 
-- Email priority
-- Email category
-- AI-generated summary
-- Intelligent email management
+* Email priority
+* Email category
+* AI-generated summary
+* Intelligent email management
 
 The current implementation focuses mainly on:
 
@@ -29,36 +29,36 @@ Additional intelligent features are being developed as part of the project.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 The main objectives of IRIS are:
 
-- Automatically identify the priority of an email.
-- Classify emails into meaningful categories.
-- Generate concise summaries of email content.
-- Apply NLP techniques to real-world email text.
-- Compare different machine-learning models.
-- Integrate NLP models with a functional backend.
-- Provide secure user authentication.
-- Store and manage emails using a database.
-- Build a foundation for intelligent email-management features.
+* Automatically identify the priority of an email.
+* Classify emails into meaningful categories.
+* Generate concise summaries of email content.
+* Apply NLP techniques to real-world email text.
+* Compare different machine-learning models.
+* Integrate NLP models with a functional backend.
+* Provide secure user authentication.
+* Store and manage emails using a database.
+* Build a foundation for intelligent email-management features.
 
 ---
 
-## ✨ Current Features
+## Current Features
 
-### 📊 Priority Classification
+### Priority Classification
 
 Emails are classified into three priority levels:
 
-- HIGH
-- MEDIUM
-- LOW
+* HIGH
+* MEDIUM
+* LOW
 
 Two machine-learning models were evaluated:
 
-- Multinomial Naive Bayes
-- Logistic Regression
+* Multinomial Naive Bayes
+* Logistic Regression
 
 The final priority prediction pipeline uses **Multinomial Naive Bayes**.
 
@@ -68,33 +68,33 @@ Test accuracy:
 
 ---
 
-### 🏷️ Category Classification
+### Category Classification
 
 Emails are automatically classified into categories such as:
 
-- Academic
-- Job/Internship
-- Work/Project
-- Meeting/Appointment
-- Personal
-- Travel
-- Technology
-- Financial
-- Security
-- Newsletter
-- Promotion
-- Entertainment
-- Food/Lifestyle
-- Community
-- Legal/Administrative
-- Event
-- Service
-- Other
+* Academic
+* Job/Internship
+* Work/Project
+* Meeting/Appointment
+* Personal
+* Travel
+* Technology
+* Financial
+* Security
+* Newsletter
+* Promotion
+* Entertainment
+* Food/Lifestyle
+* Community
+* Legal/Administrative
+* Event
+* Service
+* Other
 
 Two models were compared:
 
-- Multinomial Naive Bayes
-- Logistic Regression
+* Multinomial Naive Bayes
+* Logistic Regression
 
 The final category prediction pipeline uses **Logistic Regression**.
 
@@ -104,7 +104,7 @@ Test accuracy:
 
 ---
 
-### 📝 Email Summarization
+### Email Summarization
 
 IRIS uses a lightweight extractive summarization approach.
 
@@ -120,21 +120,21 @@ The approach runs locally and does not require a large pretrained language model
 
 Summarization evaluation was performed using:
 
-- ROUGE-1
-- ROUGE-2
-- ROUGE-L
+* ROUGE-1
+* ROUGE-2
+* ROUGE-L
 
 Evaluation results:
 
-| Metric | Score |
-|---|---:|
+| Metric  |  Score |
+| ------- | -----: |
 | ROUGE-1 | 0.4770 |
 | ROUGE-2 | 0.2818 |
 | ROUGE-L | 0.4172 |
 
 ---
 
-## 🧠 NLP Pipeline
+## NLP Pipeline
 
 The main NLP pipeline is:
 
@@ -163,15 +163,18 @@ Priority          Category          Summarization
 Classification    Classification
  ↓                  ↓                   ↓
 HIGH/MEDIUM/LOW   Email Category     Short Summary
+```
+
+---
 
 ## Machine Learning
-Priority Classification
+
+### Priority Classification
 
 Models evaluated:
 
-Multinomial Naive Bayes
-
-Logistic Regression
+* Multinomial Naive Bayes
+* Logistic Regression
 
 Multinomial Naive Bayes was selected for the final priority prediction pipeline based on the test results.
 
@@ -181,42 +184,44 @@ Logistic Regression was selected for the final category prediction pipeline.
 
 ## Dataset
 
-Main Classification Dataset
+### Main Classification Dataset
 
 A curated synthetic email dataset containing:
 
-750 emails
+**750 emails**
 
-Priority	Emails
-HIGH	250
-MEDIUM	250
-LOW	250
-Total	750
+| Priority  |  Emails |
+| --------- | ------: |
+| HIGH      |     250 |
+| MEDIUM    |     250 |
+| LOW       |     250 |
+| **Total** | **750** |
 
 Dataset fields include:
 
-email_id
-sender
-receiver
-subject
-body
-category
-priority
-source
+* email_id
+* sender
+* receiver
+* subject
+* body
+* category
+* priority
+* source
 
 The dataset was divided using an 80:20 stratified split:
 
-Training: 600 emails
-Testing: 150 emails
-Summarization Dataset
+* Training: 600 emails
+* Testing: 150 emails
+
+### Summarization Dataset
 
 A separate evaluation set containing:
 
-20 emails with human-written reference summaries
+**20 emails with human-written reference summaries**
 
 was used to evaluate the summarization component using ROUGE metrics.
 
-Enron Dataset
+### Enron Dataset
 
 The Enron Email Dataset was also explored as a supplementary real-world email corpus.
 
@@ -226,42 +231,58 @@ It was not used as the main supervised priority dataset because suitable priorit
 
 ## Technologies Used
 
-Programming Language
-Python
-NLP & Machine Learning
-NLTK
-Scikit-learn
-Pandas
-NumPy
-Matplotlib
-Joblib
-Backend
-FastAPI
-Uvicorn
-Database
-MySQL
-SQLAlchemy
-PyMySQL
-Authentication & Security
-JWT
-python-jose
-Passlib
-bcrypt
-HTTP Bearer Authentication
-Configuration
-python-dotenv
-Evaluation
-ROUGE
-Development Tools
-Spyder
-Anaconda
-Git
-GitHub
+### Programming Language
+
+* Python
+
+### NLP & Machine Learning
+
+* NLTK
+* Scikit-learn
+* Pandas
+* NumPy
+* Matplotlib
+* Joblib
+
+### Backend
+
+* FastAPI
+* Uvicorn
+
+### Database
+
+* MySQL
+* SQLAlchemy
+* PyMySQL
+
+### Authentication & Security
+
+* JWT
+* python-jose
+* Passlib
+* bcrypt
+* HTTP Bearer Authentication
+
+### Configuration
+
+* python-dotenv
+
+### Evaluation
+
+* ROUGE
+
+### Development Tools
+
+* Spyder
+* Anaconda
+* Git
+* GitHub
 
 ---
 
 ## System Architecture
 
+```text
                   ┌───────────────────┐
                   │       User        │
                   └─────────┬─────────┘
@@ -290,6 +311,9 @@ GitHub
                  ┌───────────────────┐
                  │   MySQL Database  │
                  └───────────────────┘
+```
+
+---
 
 ## Authentication
 
@@ -297,6 +321,7 @@ IRIS uses JWT-based authentication.
 
 The authentication flow is:
 
+```text
 User Registration
        ↓
 Password Hashing
@@ -310,10 +335,13 @@ JWT Access Token
 Bearer Authentication
        ↓
 Protected API Endpoints
+```
 
 Passwords are hashed using bcrypt before being stored.
 
 Sensitive configuration such as database credentials and the JWT secret is stored in environment variables rather than directly in the source code.
+
+---
 
 ## Backend API
 
@@ -321,6 +349,7 @@ The FastAPI backend currently provides endpoints for authentication, email manag
 
 Examples include:
 
+```text
 POST /auth/register
 POST /auth/login
 
@@ -331,10 +360,15 @@ POST /ai/summarize
 
 GET /health
 GET /database-test
+```
 
 The API can be tested through the FastAPI Swagger interface.
 
+---
+
 ## Project Structure
+
+```text
 IRIS/
 │
 ├── backend/
@@ -389,78 +423,94 @@ IRIS/
 │
 ├── .gitignore
 └── README.md
+```
+
+---
 
 ## Privacy and Security
 
 The current backend includes:
 
-Password hashing
-JWT authentication
-Bearer token authentication
-Environment-based configuration
-Protected backend endpoints
+* Password hashing
+* JWT authentication
+* Bearer token authentication
+* Environment-based configuration
+* Protected backend endpoints
 
 Future versions can include stronger privacy-preserving and encryption mechanisms.
 
-## Current Development Status
-# Completed
- Dataset preparation
- Text preprocessing
- TF-IDF feature extraction
- Priority classification
- Category classification
- Email summarization
- Model evaluation
- Error analysis
- FastAPI backend
- MySQL database integration
- User registration
- User login
- JWT authentication
- Email sending
- Inbox
- Read/unread functionality
- Automatic priority, category and summary generation
+---
 
-# In Development
- Smart replies
- Explainable priority
- Frontend interface
- Intelligent reminders
- Opportunity detection
- Smart email management
- Additional personalization features
+## Current Development Status
+
+### Completed
+
+* Dataset preparation
+* Text preprocessing
+* TF-IDF feature extraction
+* Priority classification
+* Category classification
+* Email summarization
+* Model evaluation
+* Error analysis
+* FastAPI backend
+* MySQL database integration
+* User registration
+* User login
+* JWT authentication
+* Email sending
+* Inbox
+* Read/unread functionality
+* Automatic priority, category and summary generation
+
+### In Development
+
+* Smart replies
+* Explainable priority
+* Frontend interface
+* Intelligent reminders
+* Opportunity detection
+* Smart email management
+* Additional personalization features
+
+---
 
 ## Future Scope
 
 Future versions of IRIS can include:
 
-Larger real-world labelled email datasets
-Advanced summarization models
-Personalized priority prediction
-Smart reply generation
-Behaviour-based email organization
-Smart email cleanup with user approval
-Automatic reminders for important events
-Job and internship opportunity detection
-Improved category classification
-Stronger privacy and encryption mechanisms
-A complete production-ready web interface
+* Larger real-world labelled email datasets
+* Advanced summarization models
+* Personalized priority prediction
+* Smart reply generation
+* Behaviour-based email organization
+* Smart email cleanup with user approval
+* Automatic reminders for important events
+* Job and internship opportunity detection
+* Improved category classification
+* Stronger privacy and encryption mechanisms
+* A complete production-ready web interface
 
-##  Research Focus
+---
+
+## Research Focus
 
 The project focuses on applying Natural Language Processing to email management, particularly:
 
-Email priority classification
-Email category classification
-Email summarization
-Traditional NLP and machine-learning methods
-Lightweight local NLP processing
+* Email priority classification
+* Email category classification
+* Email summarization
+* Traditional NLP and machine-learning methods
+* Lightweight local NLP processing
+
+---
 
 ## Author
 
-Nupur Makwana
+**Nupur Makwana**
 
 BCA – Department of Computer Applications
 
-## This project is developed for academic and educational purposes.
+---
+
+This project is developed for academic and educational purposes.
