@@ -11,7 +11,14 @@ from pydantic import BaseModel
 
 from database import SessionLocal
 from models import User, Email
-from ai import predict_priority, predict_category, generate_summary
+from ai import (
+    predict_priority,
+    predict_category,
+    generate_summary,
+    generate_replies
+)
+
+from priority_explanation import explain_priority
 from security import get_current_user
 
 
@@ -52,18 +59,30 @@ def send_email(
         )
 
     priority = predict_priority(
-        email_data.subject,
-        email_data.body
+    email_data.subject,
+    email_data.body
     )
-    
+
     category = predict_category(
     email_data.subject,
     email_data.body
     )
+
     summary = generate_summary(
     email_data.subject,
     email_data.body
-        )
+    )
+
+    priority_reason = explain_priority(
+    email_data.subject,
+    email_data.body,
+    priority
+    )
+
+    smart_replies = generate_replies(
+    email_data.subject,
+    email_data.body
+    )
     
     new_email = Email(
     sender_id=current_user.id,
@@ -74,6 +93,7 @@ def send_email(
     category=category,
     summary=summary
 )
+
     db.add(new_email)
     db.commit()
     db.refresh(new_email)
@@ -81,11 +101,11 @@ def send_email(
     return {
     "message": "Email sent successfully",
     "email_id": new_email.id,
-    "sender": current_user.email,
-    "receiver": receiver.email,
-    "subject": new_email.subject,
-    "priority": new_email.priority,
-    "category": new_email.category
+    "priority": priority,
+    "priority_reason": priority_reason,
+    "category": category,
+    "summary": summary,
+    "smart_replies": smart_replies
 }
 
 @router.get("/inbox")

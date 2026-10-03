@@ -76,13 +76,7 @@ def preprocess_text(text):
     # Remove URLs
     text = re.sub(r"http\S+|www\S+", " ", text)
 
-    # Keep:
-    # letters
-    # numbers
-    # spaces
-    # colon (10:00)
-    # slash (25/09/2026)
-    # hyphen (25-09-2026)
+    # Keep: letters ,  numbers , spaces , colon (10:00) , slash (25/09/2026) ,hyphen (25-09-2026)
     text = re.sub(r"[^a-zA-Z0-9\s:/\-]", " ", text)
 
     # Remove extra spaces
