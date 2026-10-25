@@ -14,7 +14,11 @@ from auth import router as auth_router
 from emails import router as email_router
 
 from pydantic import BaseModel
-from ai import generate_summary
+from ai import (
+    generate_summary,
+    generate_replies,
+    generate_priority_explanation
+)
 
 app = FastAPI(
     title="IRIS - Intelligent Email Analysis System",
@@ -76,3 +80,31 @@ def summarize_email_api(data: SummarizeRequest):
         "subject": data.subject,
         "summary": summary
     }
+
+class SmartRepliesRequest(BaseModel):
+    subject: str
+    body: str
+
+
+@app.post("/ai/smart-replies")
+def smart_replies_api(data: SmartRepliesRequest):
+    replies = generate_replies(
+        data.subject,
+        data.body
+    )
+
+    return {
+        "subject": data.subject,
+        "replies": replies
+    }
+class PriorityExplanationRequest(BaseModel):
+    subject: str
+    body: str
+
+
+@app.post("/ai/explain-priority")
+def explain_priority_api(data: PriorityExplanationRequest):
+    return generate_priority_explanation(
+        data.subject,
+        data.body
+    )

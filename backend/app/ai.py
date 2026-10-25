@@ -13,6 +13,7 @@ sys.path.append(r"E:\IRIS\src")
 from preprocessing import preprocess_text
 from summarization import summarize_email
 from smart_replies import generate_smart_replies
+from priority_explanation import explain_priority
 
 MODEL_PATH = r"E:\IRIS\models\priority_nb_model.pkl"
 VECTORIZER_PATH = r"E:\IRIS\models\priority_tfidf_vectorizer.pkl"
@@ -46,3 +47,11 @@ def generate_summary(subject, body):
 
 def generate_replies(subject, body):
     return generate_smart_replies(subject, body)
+def generate_priority_explanation(subject, body):
+    priority = predict_priority(subject, body)
+    explanation = explain_priority(subject, body, priority)
+
+    return {
+        "priority": str(priority),
+        "explanation": explanation
+    }
