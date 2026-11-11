@@ -636,7 +636,7 @@ function App() {
           </section>
         )}
       </main>
-
+      
       {showReminder && (
         <div className="modal-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) setShowReminder(false); }}>
           <form className="modal-card" onSubmit={(event) => { event.preventDefault(); scheduleReminder(); }}>
@@ -651,7 +651,27 @@ function App() {
     </div>
   );
 }
+function ReminderToast({ title, time, place, onClose }) {
+  return (
+    <div className="reminder-toast" role="alert">
+      <div className="reminder-toast-content">
+        <strong>{title}</strong>
+        <span>
+          {time}
+          {place && ` · ${place}`}
+        </span>
+      </div>
 
+      <button
+        className="reminder-toast-close"
+        onClick={onClose}
+        aria-label="Dismiss reminder"
+      >
+        ×
+      </button>
+    </div>
+  );
+}
 function PriorityBadge({ priority, score }) {
   return <span className={`priority-badge ${priority.toLowerCase()}`}><i />{priority}{score !== undefined && <span className="priority-score"> {score}</span>}</span>;
 }
